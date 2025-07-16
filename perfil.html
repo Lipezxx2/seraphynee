@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil - Seraphyne</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="perfil.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <h1>Seraphyne</h1>
+      <span>Amar sem olhar a quem</span>
+    </div>
+    <a href="home.html" class="back-btn">
+      <i class="fas fa-arrow-left"></i> Voltar
+    </a>
+  </header>
+
+  <main class="perfil-container">
+    <h2>Meu Perfil</h2>
+    <div class="profile-card">
+      <div class="avatar-placeholder">
+        <i class="fas fa-user-circle"></i>
+      </div>
+      <div class="info">
+        <p><strong>Nome:</strong> <span id="perfil-nome">Usuário</span></p>
+        <p><strong>E-mail:</strong> <span id="perfil-email">exemplo@email.com</span></p>
+        <p><strong>Data de nascimento:</strong> <span id="perfil-nascimento">01/01/2000</span></p>
+      </div>
+    </div>
+    <button id="logoutBtn" class="btn-sair">Sair</button>
+  </main>
+
+  <script>
+    // Recuperar usuário atual do localStorage
+    const user = JSON.parse(localStorage.getItem('seraphyne_currentUser'));
+    if (user) {
+      document.getElementById('perfil-nome').textContent = user.username || 'Usuário';
+      document.getElementById('perfil-email').textContent = user.email || 'sem e-mail';
+    } else {
+      alert('Você precisa estar logado.');
+      window.location.href = 'index.html';
+    }
+
+    // Botão de logout
+    document.getElementById('logoutBtn').addEventListener('click', () => {
+      localStorage.removeItem('seraphyne_currentUser');
+      alert('Você saiu da sua conta.');
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>
