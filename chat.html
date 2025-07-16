@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat - Seraphyne</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+    <header class="chat-header">
+        <div class="logo">
+            <h1>Seraphyne</h1>
+            <span>Amar sem olhar a quem</span>
+        </div>
+        <a href="perfil.html" class="profile-btn">
+            <i class="fas fa-user-circle"></i>
+        </a>
+    </header>
+
+    <main class="chat-container">
+        <!-- Lista de conversas -->
+        <div class="conversations">
+            <div class="conversation active">
+                <div class="avatar">JD</div>
+                <div class="info">
+                    <h3>Joana Dias</h3>
+                    <p>Oi, como você está?</p>
+                </div>
+                <span class="time">10:30</span>
+            </div>
+            <div class="conversation">
+                <div class="avatar">CS</div>
+                <div class="info">
+                    <h3>Carlos Silva</h3>
+                    <p>Você gosta de música clássica?</p>
+                </div>
+                <span class="time">Ontem</span>
+            </div>
+        </div>
+
+        <!-- Área de mensagens -->
+        <div class="messages-container">
+            <div class="messages" id="messages">
+                <div class="message received">
+                    <p>Oi! Como você está?</p>
+                    <span>10:30</span>
+                </div>
+                <div class="message sent">
+                    <p>Estou bem, obrigado! E você?</p>
+                    <span>10:32</span>
+                </div>
+            </div>
+
+            <!-- Input de mensagem -->
+            <div class="message-input">
+                <input type="text" id="messageInput" placeholder="Digite sua mensagem...">
+                <button id="sendButton">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script src="chat.js"></script>
+</body>
+</html>

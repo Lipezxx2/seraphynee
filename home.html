@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seraphyne - Conexões Reais</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <!-- Header com cor mais forte -->
+    <header class="header">
+        <div class="logo">
+            <h1>Seraphyne</h1>
+            <span>Amar sem olhar a quem</span>
+        </div>
+        <div class="header-actions">
+            <button class="chat-btn" onclick="irParaChat()">
+                <i class="fas fa-comment-dots"></i> Chat
+            </button>
+            <a href="perfil.html" class="profile-btn">
+                <i class="fas fa-user-circle"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+        <section class="welcome-section">
+            <h2 id="welcomeMessage">Bem-vindo de volta!</h2>
+            <p>Onde conexões reais acontecem além das aparências</p>
+            
+            <div class="destaque">
+                <i class="fas fa-heart"></i>
+                <p>Encontre alguém compatível com sua essência</p>
+            </div>
+        </section>
+
+        <!-- Seção Sobre Nós -->
+        <section class="about">
+            <h3><i class="fas fa-star"></i> Sobre Nós</h3>
+            <p>Seraphyne é mais que um app de relacionamentos - somos uma plataforma que valoriza conexões autênticas baseadas em personalidade e valores.</p>
+        </section>
+    </main>
+
+    <!-- Footer completo -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h4>Seraphyne</h4>
+            </div>
+            <div class="footer-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="mailto:contato@seraphyne.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Seraphyne - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mostrar nome do usuário
+        const user = JSON.parse(localStorage.getItem('seraphyne_currentUser'));
+        if(user) {
+            document.getElementById('welcomeMessage').textContent = `Bem-vindo, ${user.username}!`;
+        }
+
+        function irParaChat() {
+            window.location.href = 'chat.html';
+        }
+    </script>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+</body>
+</html>

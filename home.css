@@ -1,0 +1,202 @@
+/* Cores mais vibrantes como na versão original */
+:root {
+    --primary: #2c3e80;       /* Azul mais forte */
+    --primary-light: #3a56b4; /* Tom mais vibrante */
+    --secondary: #6d8eff;     /* Destaques */
+    --white: #ffffff;
+    --off-white: #f8f9fa;
+    --gray-light: #e9ecef;
+    --gray: #adb5bd;
+    --black: #212529;
+}
+
+/* Base */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--off-white);
+    color: var(--black);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary);
+}
+
+/* Header - Cor mais forte */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: var(--primary);
+    color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    color: white;
+}
+
+.logo span {
+    font-size: 0.9rem;
+    color: var(--gray-light);
+    font-style: italic;
+}
+
+.header-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* Botões */
+.chat-btn {
+    background: var(--secondary);
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s;
+    font-weight: 600;
+}
+
+.chat-btn:hover {
+    background: white;
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.profile-btn {
+    color: white;
+    font-size: 1.8rem;
+    transition: transform 0.3s;
+}
+
+.profile-btn:hover {
+    transform: scale(1.1);
+    color: var(--secondary);
+}
+
+/* Conteúdo Principal */
+.main-content {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    flex: 1;
+    text-align: center;
+}
+
+.welcome-section h2 {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.welcome-section p {
+    font-size: 1.1rem;
+    color: var(--black);
+    margin-bottom: 2rem;
+}
+
+.destaque {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    margin: 2rem 0;
+    border-left: 4px solid var(--secondary);
+}
+
+.destaque i {
+    color: var(--secondary);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Seção Sobre Nós */
+.about {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 3rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.about h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+/* Footer */
+.footer {
+    background: var(--primary);
+    color: white;
+    padding: 2rem 1rem 1rem;
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-links a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--secondary);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .main-content {
+        padding: 1rem;
+    }
+}
